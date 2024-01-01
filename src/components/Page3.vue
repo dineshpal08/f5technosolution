@@ -136,11 +136,7 @@
               </div>
             </div>
           </div>
-          <div class="flex justify-center">
-            <p v-if="validateProfile()" class="text-red-500 text-xs mt-2">
-              Please select a profile
-            </p>
-          </div>
+          <div class="flex justify-center"></div>
         </div>
 
         <!-- Add validation for other form fields if needed -->
@@ -184,9 +180,9 @@ export default {
     ...mapState(["incerment", "data"]),
   },
   methods: {
-    validateProfile() {
-      return !this.formData.selected.length;
-    },
+    // validateProfile() {
+    //   return !this.formData.selected.length;
+    // },
     validateName() {
       return this.formData.name.trim() !== "";
     },
@@ -208,8 +204,7 @@ export default {
         this.validateName() &&
         this.validateMobileNo() &&
         this.validateDesignation() &&
-        this.validateEmail() &&
-        this.validateProfile()
+        this.validateEmail()
         /* Add other validations here */
       ) {
         console.log(JSON.stringify(this.formData), "formDataformDataformData");

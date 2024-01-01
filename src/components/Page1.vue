@@ -1,5 +1,5 @@
 <template>
-  <div class="w-10/12 boxshadoepage1 mx-auto mt-10 pb-10">
+  <div class="w-10/12 boxshadoepage1 sm:mx-4 md:mx-8 mx-auto mt-10 pb-10">
     <div class="flex gap-7 items-center csss">
       <div class="w-10 h-10 rounded-full flex justify-center items-center">
         <svg
@@ -26,7 +26,9 @@
       </div>
     </div>
     <div class="forms mt-10">
-      <div class="grid grid-cols-2 gap-12 lg:px-20 w-full">
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 lg:gap-12 md:gap-8 lg:px-20 w-full"
+      >
         <div class="flex gap-5 items-center">
           <div class="w-5/12 text-right">
             <label class="text-sm mb-2" for="">Registered Company Name </label>
