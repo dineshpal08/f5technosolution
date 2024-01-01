@@ -89,14 +89,11 @@
               placeholder="For E.g www.PNG.com"
               v-model="formData.website"
             />
-            <!-- <p class="text-xs mt-2">
-                    Company Name as Registered on Official Documents
-                  </p> -->
           </div>
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-4/12 text-right">
-            <label class="text-sm mb-2" for="">Management Authorization</label>
+            <label class="text-sm mb-2" for="">TAN No.</label>
           </div>
           <div class="w-8/12 flex items-start gap-1">
             <div>
@@ -317,6 +314,12 @@
                 upload
               </button>
             </div>
+          </div>
+        </div>
+        <div class="flex gap-5 items-center">
+          <div class="w-4/12 text-right"></div>
+          <div class="w-8/12 flex items-start gap-1">
+            <div></div>
           </div>
         </div>
 
