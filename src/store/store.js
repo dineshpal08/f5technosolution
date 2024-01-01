@@ -6,8 +6,8 @@ const store = createStore({
   state: {
     users: [
       {
-        name: "vikash",
-        age: "26",
+        name: "Dinesh",
+        age: "27",
       },
     ],
     data: [],

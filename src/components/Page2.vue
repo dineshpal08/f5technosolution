@@ -1,5 +1,5 @@
 <template>
-  <div class="w-10/12 boxshadoepage1 mx-auto mt-10 pb-10">
+  <div class="w-3/4 boxshadoepage1 mx-auto mt-10 pb-10">
     <div class="flex gap-7 items-center csss">
       <div class="w-10 h-10 rounded-full flex justify-center items-center">
         <svg
@@ -36,7 +36,6 @@
           data-testid="PeopleAltIcon"
           tabindex="-1"
           fill="currentColor"
-
           title="PeopleAlt"
         >
           <path

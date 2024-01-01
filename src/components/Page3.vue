@@ -1,5 +1,5 @@
 <template>
-  <div class="w-10/12 boxshadoepage1 mx-auto mt-10 pb-10 z-50 bgffff">
+  <div class="w-8/12 boxshadoepage1 mx-auto mt-10 pb-10 z-50 bgffff rounded-lg">
     <div class="flex gap-7 items-center csss">
       <div class=" ">
         <h2 class="button text-lg">Add User</h2>
@@ -9,7 +9,8 @@
       <div class="grid grid-cols-2 gap-12 lg:px-10 w-full">
         <div class="flex gap-5 items-center">
           <div class="w-5/12 text-right">
-            <label class="text-sm mb-2" for="">Name *</label>
+            <label class="text-sm mb-2" for="">Name </label>
+            <label v-if="!validateName()" class="text-red-500 text-xs">*</label>
           </div>
           <div class="w-7/12">
             <input
@@ -21,14 +22,14 @@
                 'border-green-500': validateName(),
               }"
             />
-            <p v-if="!validateName()" class="text-red-500 text-xs mt-2">
-              Name is required
-            </p>
           </div>
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-4/12 text-right">
-            <label class="text-sm mb-2" for="">Mobile No. *</label>
+            <label class="text-sm mb-2" for="">Mobile No. </label>
+            <label v-if="!validateMobileNo()" class="text-red-500 text-xs"
+              >*</label
+            >
           </div>
           <div class="w-8/12 items-center gap-1">
             <input
@@ -40,14 +41,14 @@
                 'border-green-500': validateMobileNo(),
               }"
             />
-            <p v-if="!validateMobileNo()" class="text-red-500 text-xs mt-2">
-              Valid Mobile No. is required
-            </p>
           </div>
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-5/12 text-right">
-            <label class="text-sm mb-2" for="">Designation *</label>
+            <label class="text-sm mb-2" for="">Designation </label>
+            <label v-if="!validateDesignation()" class="text-red-500 text-xs"
+              >*</label
+            >
           </div>
           <div class="w-7/12">
             <input
@@ -59,14 +60,14 @@
                 'border-green-500': validateDesignation(),
               }"
             />
-            <p v-if="!validateDesignation()" class="text-red-500 text-xs mt-2">
-              Designation is required
-            </p>
           </div>
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-4/12 text-right">
-            <label class="text-sm mb-2" for="">Email ID *</label>
+            <label class="text-sm mb-2" for="">Email ID </label>
+            <label v-if="!validateEmail()" class="text-red-500 text-xs"
+              >*</label
+            >
           </div>
           <div class="w-8/12 flex gap-1">
             <div>
@@ -79,16 +80,13 @@
                   'border-green-500': validateEmail(),
                 }"
               />
-              <p v-if="!validateEmail()" class="text-red-500 text-xs mt-2">
-                Valid Email ID is required
-              </p>
             </div>
           </div>
         </div>
 
-        <div class="flex gap-5 flex-column">
+        <div class="flex gap-5 items-center">
           <div class="flex gap-3">
-            <div class="w-5/12 text-right">
+            <div class="w-4/12 text-right">
               <label class="text-sm mb-2" for="">Profile *</label>
             </div>
             <div class="flex gap-5">
@@ -139,7 +137,7 @@
             </div>
           </div>
           <div class="flex justify-center">
-            <p v-if="!validateProfile()" class="text-red-500 text-xs mt-2">
+            <p v-if="validateProfile()" class="text-red-500 text-xs mt-2">
               Please select a profile
             </p>
           </div>
@@ -187,7 +185,7 @@ export default {
   },
   methods: {
     validateProfile() {
-      return this.formData.selected !== "";
+      return !this.formData.selected.length;
     },
     validateName() {
       return this.formData.name.trim() !== "";

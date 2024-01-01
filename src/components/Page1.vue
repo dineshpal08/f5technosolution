@@ -26,12 +26,15 @@
       </div>
     </div>
     <div class="forms mt-10">
-      <div class="grid grid-cols-2 gap-12 lg:px-10 w-full">
+      <div class="grid grid-cols-2 gap-12 lg:px-20 w-full">
         <div class="flex gap-5 items-center">
           <div class="w-5/12 text-right">
-            <label class="text-sm mb-2" for="">Registered Company Name *</label>
+            <label class="text-sm mb-2" for="">Registered Company Name </label>
+            <label v-if="!validateCompanyName()" class="text-red-500 text-xs"
+              >*</label
+            >
           </div>
-          <div class="w-7/12">
+          <div class="w-7/12 items-center justify-center">
             <input
               class="inputstyle"
               placeholder="Enter Company name"
@@ -41,9 +44,7 @@
                 'border-green-500': validateCompanyName(),
               }"
             />
-            <p v-if="!validateCompanyName()" class="text-red-500 text-xs mt-2">
-              field is required
-            </p>
+
             <p class="text-xs mt-2">
               Company Name as Registered on Official Documents
             </p>
@@ -51,7 +52,8 @@
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-4/12 text-right">
-            <label class="text-sm mb-2" for="">PAN No *</label>
+            <label class="text-sm mb-2" for="">PAN No </label>
+            <label v-if="!validatePan()" class="text-red-500 text-xs">*</label>
           </div>
           <div class="w-8/12 flex items-center gap-1">
             <div>
@@ -64,9 +66,6 @@
                   'border-green-500': validatePan(),
                 }"
               />
-              <p v-if="!validatePan()" class="text-red-500 text-xs mt-2">
-                field is required
-              </p>
             </div>
 
             <div>
@@ -121,15 +120,13 @@
               >
                 Upload
               </button>
-              <p v-if="!validateFile()" class="text-red-500 text-xs mt-2">
-                Please upload a file
-              </p>
             </div>
           </div>
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-5/12 text-right">
-            <label class="text-sm mb-2" for="">Your Name *</label>
+            <label class="text-sm mb-2" for="">Your Name </label>
+            <label v-if="!validateName()" class="text-red-500 text-xs">*</label>
           </div>
           <div class="w-7/12">
             <input
@@ -141,9 +138,6 @@
                 'border-green-500': validateName(),
               }"
             />
-            <p v-if="!validateName()" class="text-red-500 text-xs mt-2">
-              field is required
-            </p>
 
             <!-- <p class="text-xs mt-2">
                       Company Name as Registered on Official Documents
@@ -152,7 +146,10 @@
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-4/12 text-right">
-            <label class="text-sm mb-2" for="">CIN No.</label>
+            <label class="text-sm mb-2" for="">CIN No. </label>
+            <label v-if="!validateCinNo()" class="text-red-500 text-xs"
+              >*</label
+            >
           </div>
           <div class="w-8/12 flex items-start justify-between gap-1">
             <div>
@@ -165,9 +162,6 @@
                   'border-green-500': validateCinNo(),
                 }"
               />
-              <p v-if="!validateCinNo()" class="text-red-500 text-xs mt-2">
-                field is required
-              </p>
             </div>
 
             <div>
@@ -182,7 +176,10 @@
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-5/12 text-right">
-            <label class="text-sm mb-2" for="">Your Email ID *</label>
+            <label class="text-sm mb-2" for="">Your Email ID </label>
+            <label v-if="!validateEmail()" class="text-red-500 text-xs"
+              >*</label
+            >
           </div>
           <div class="w-7/12">
             <input
@@ -194,9 +191,6 @@
                 'border-green-500': validateEmail(),
               }"
             />
-            <p v-if="!validateEmail()" class="text-red-500 text-xs mt-2">
-              Valid Email ID is required
-            </p>
 
             <!-- <p class="text-xs mt-2">
                       Company Name as Registered on Official Documents
@@ -227,7 +221,10 @@
         </div>
         <div class="flex gap-5 items-center">
           <div class="w-5/12 text-right">
-            <label class="text-sm mb-2" for="">Your Mobile No. *</label>
+            <label class="text-sm mb-2" for="">Your Mobile No. </label>
+            <label v-if="!validateMobileNo()" class="text-red-500 text-xs"
+              >*</label
+            >
           </div>
           <div class="w-7/12">
             <input
@@ -239,13 +236,6 @@
                 'border-green-500': validateMobileNo(),
               }"
             />
-            <p v-if="!validateMobileNo()" class="text-red-500 text-xs mt-2">
-              Valid Mobile No. is required
-            </p>
-
-            <!-- <p class="text-xs mt-2">
-                      Company Name as Registered on Official Documents
-                    </p> -->
           </div>
         </div>
         <div class="flex gap-5 items-center">
@@ -253,16 +243,6 @@
             <label class="text-sm mb-2" for="">Cancelled Cheque </label>
           </div>
           <div class="w-8/12 flex items-start gap-1">
-            <!-- <div>
-                <input
-                  class="inputstyle"
-                  placeholder="Enter the Company PAN no."
-                />
-                <p class="text-xs mt-2">
-                  TAN : Tax Deduction Account Number of the company
-                </p>
-              </div> -->
-
             <div>
               <button
                 class="text-blue px-5 py-2 text-md rounded-full border"
@@ -297,15 +277,6 @@
             >
           </div>
           <div class="w-8/12 flex items-start gap-1">
-            <!-- <div>
-                <input
-                  class="inputstyle"
-                  placeholder="Enter the Company PAN no."
-                />
-                <p class="text-xs mt-2">
-                  TAN : Tax Deduction Account Number of the company
-                </p>
-              </div> -->
             <div>
               <button
                 class="text-blue px-5 py-2 text-md rounded-full border"
@@ -336,15 +307,6 @@
             <p class="text-xs mt-2">Company-pan.pdf</p>
           </div>
           <div class="w-8/12 flex items-start gap-1">
-            <!-- <div>
-                <input
-                  class="inputstyle"
-                  placeholder="Enter the Company PAN no."
-                />
-                <p class="text-xs mt-2">
-                  TAN : Tax Deduction Account Number of the company
-                </p>
-              </div> -->
             <div>
               <button
                 class="text-blue px-5 py-2 text-md rounded-full border"
