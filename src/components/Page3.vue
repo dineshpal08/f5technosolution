@@ -87,7 +87,7 @@
         <div class="flex gap-5 items-center">
           <div class="flex gap-3">
             <div class="w-4/12 text-right">
-              <label class="text-sm mb-2" for="">Profile *</label>
+              <label class="text-sm mb-2" for="">Profile </label>
             </div>
             <div class="flex gap-5">
               <div class="w-8/12 flex items-center gap-3">
@@ -138,8 +138,6 @@
           </div>
           <div class="flex justify-center"></div>
         </div>
-
-        <!-- Add validation for other form fields if needed -->
       </div>
       <div class="flex justify-center w-full mt-10">
         <div>
@@ -172,7 +170,6 @@ export default {
         designation: "",
         email: "",
         selected: [],
-        // Add other form fields here
       },
     };
   },
@@ -180,14 +177,10 @@ export default {
     ...mapState(["incerment", "data"]),
   },
   methods: {
-    // validateProfile() {
-    //   return !this.formData.selected.length;
-    // },
     validateName() {
       return this.formData.name.trim() !== "";
     },
     validateMobileNo() {
-      // Basic mobile number validation (you may want to enhance it based on your requirements)
       const mobileRegex = /^\d{10}$/;
       return mobileRegex.test(this.formData.mobileNo);
     },
@@ -195,7 +188,6 @@ export default {
       return this.formData.designation.trim() !== "";
     },
     validateEmail() {
-      // Basic email validation (you may want to enhance it based on your requirements)
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(this.formData.email);
     },
@@ -205,7 +197,6 @@ export default {
         this.validateMobileNo() &&
         this.validateDesignation() &&
         this.validateEmail()
-        /* Add other validations here */
       ) {
         console.log(JSON.stringify(this.formData), "formDataformDataformData");
         this.$store.commit("ADD_USER_DATA", this.formData);
@@ -226,7 +217,6 @@ export default {
     const userData = this.$store.state.data;
     const userDataArray = JSON.parse(JSON.stringify(this.formData));
 
-    // Log the actual data
     console.log(userDataArray);
   },
 };

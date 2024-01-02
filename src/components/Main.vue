@@ -1,5 +1,4 @@
 <template>
-  <!-- <h1 class="text-8xl">dsd</h1> -->
   <div
     class="main flex justify-center items-start gap-3 mt-5 text-lg textcolor"
   >
@@ -7,7 +6,6 @@
   </div>
   <div class="main flex justify-center items-start gap-3 mt-5">
     <div>
-      <!-- {{ this.incerment }}dfdflkjlkjlkj -->
       <div
         :class="
           incerment === 1 || 2
@@ -113,14 +111,13 @@
 <script>
 import Page1 from "./Page1.vue";
 import Footer from "./Footer.vue";
-import Page2 from "./Page2.vue"; // Corrected the capitalization
-import Page3 from "./Page3.vue"; // Corrected the capitalization
-import Page4 from "./Page4.vue"; // Corrected the capitalization
+import Page2 from "./Page2.vue";
+import Page3 from "./Page3.vue";
+import Page4 from "./Page4.vue";
 import { mapState } from "vuex";
 
 export default {
   components: {
-    // Fixed the syntax for components
     Page1,
     Footer,
     Page2,
@@ -129,11 +126,10 @@ export default {
   },
 
   watch: {
-    // Added the methods block
     incerment() {},
   },
   computed: {
-    ...mapState(["incerment"]), // Fixed the spelling of increment
+    ...mapState(["incerment"]),
   },
   created() {
     console.log(this.incerment, "incrementincrementincrement");

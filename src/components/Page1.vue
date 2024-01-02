@@ -193,10 +193,6 @@
                 'border-green-500': validateEmail(),
               }"
             />
-
-            <!-- <p class="text-xs mt-2">
-                      Company Name as Registered on Official Documents
-                    </p> -->
           </div>
         </div>
         <div class="flex gap-5 items-center">
@@ -358,7 +354,6 @@ export default {
         gst: "",
         mobileNo: "",
         biling: "",
-        // Add other form fields here
       },
       isFileUploaded: false,
     };
@@ -388,7 +383,6 @@ export default {
       return emailRegex.test(this.formData.email);
     },
     handleFileUpload(event) {
-      // Handle the file upload logic here
       const file = event.target.files[0];
 
       if (file) {
@@ -399,7 +393,6 @@ export default {
       }
     },
     openFileInput() {
-      // Open the hidden file input when the button is clicked
       this.$refs.fileInput.click();
     },
     incrementVal() {
@@ -412,13 +405,11 @@ export default {
         this.validateMobileNo()
       ) {
         var inc = 2;
-        inc = inc++; // Increment inc by 1
+        inc = inc++;
         this.$store.commit("INCREMENT_SLIDER", inc);
 
-        // Access the updated value from the state
         const updatedIncrementValue = this.$store.state.incerment;
 
-        // Log the updated value
         console.log(updatedIncrementValue, "sdsdsd");
       } else {
         alert("Please fill in all required fields with valid data.");

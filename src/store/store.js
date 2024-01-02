@@ -1,7 +1,6 @@
 // store.js
 import { createStore } from "vuex";
 
-// Define your store modules, state, mutations, actions, etc.
 const store = createStore({
   state: {
     users: [
@@ -21,13 +20,8 @@ const store = createStore({
       state.incerment = payload;
     },
   },
-  actions: {
-    // Your actions go here
-  },
-  getters: {
-    // Your getters go here
-  },
-  // Add more modules if needed
+  actions: {},
+  getters: {},
 });
 
 export default store;

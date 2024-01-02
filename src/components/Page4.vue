@@ -23,7 +23,6 @@
             <td>{{ item.designation }}</td>
             <td>{{ item.email }}</td>
             <td>{{ item.selected.toString() }}</td>
-            <!-- <td v-for="ite in item.selected" :key="ite.id">{{ ite.id }}</td> -->
           </tr>
         </tbody>
       </v-table>
@@ -42,7 +41,6 @@ export default {
 
   computed: {
     ...mapState(["data"]),
-    // ...mapState("userdata", ["data"]),
   },
   mounted() {
     this.getall();
