@@ -34,9 +34,7 @@
 import { mapState } from "vuex";
 export default {
   data() {
-    return {
-      userData: {},
-    };
+    return {};
   },
 
   computed: {
@@ -47,7 +45,6 @@ export default {
   },
   methods: {
     getall() {
-      this.userData = JSON.stringify(this.data);
       console.log(JSON.stringify(this.data), "fdfsdgfh0");
       console.log("page4", this.data);
     },
