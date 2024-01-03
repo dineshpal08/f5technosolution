@@ -1,5 +1,7 @@
 <template>
-  <div class="w-10/12 boxshadoepage1 sm:mx-4 md:mx-8 mx-auto mt-10 pb-10">
+  <div
+    class="w-10/12 boxshadoepage1 sm:mx-4 md:mx-8 mx-auto mt-10 pb-10 rounded-md"
+  >
     <div class="flex gap-7 items-center csss">
       <div class="w-10 h-10 rounded-full flex justify-center items-center">
         <svg
@@ -319,9 +321,13 @@
       <div class="flex justify-center w-full mt-10">
         <div>
           <div class="justify-center flex items-center gap-5">
-            <button class="button px-5 py-2 text-md border">Back</button>
             <button
-              class="button px-5 py-2 text-md border"
+              class="button px-5 py-2 text-md border hover:bg-blue-600 hover:text-white"
+            >
+              Back
+            </button>
+            <button
+              class="button px-5 py-2 text-md border hover:bg-blue-600 hover:text-white"
               @click="incrementVal"
             >
               Next >

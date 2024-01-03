@@ -1,6 +1,6 @@
 <template>
   <div
-    class="main flex justify-center items-start gap-3 mt-5 text-lg textcolor"
+    class="main flex justify-center items-start gap-3 mt-10 mb-10 text-lg textcolor"
   >
     Setup your company’s inventory management/ buying system in 3 steps
   </div>

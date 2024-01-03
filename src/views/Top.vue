@@ -4,15 +4,6 @@
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
-<style scoped>
-.topnavbars {
-
-}
-
-button {
-  /* Add any button styles you need */
-}
-</style>
+<style scoped></style>

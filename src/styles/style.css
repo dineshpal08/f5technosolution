@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   height: 70px; /* Optionally, set a specific height for the container */
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 3px;
 }
 .topnavbars button {
   margin: 16px;
@@ -48,7 +48,7 @@
   rotate: -28deg;
 }
 .boxshadoepage1 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 20px 0px;
 }
 .csss {
   padding: 37px 52px;
@@ -92,6 +92,6 @@
   color: #347aaa;
 }
 
-.bgfff{
+.bgfff {
   background: #ffff;
 }
