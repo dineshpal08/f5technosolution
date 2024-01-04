@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="main flex justify-center items-start gap-3 mt-10 mb-10 text-lg textcolor"
-  >
+  <div class="main flex justify-center gap-3 mt-10 mb-10 text-lg textcolor">
     Setup your company’s inventory management/ buying system in 3 steps
   </div>
   <div class="main flex justify-center items-start gap-3 mt-5">
@@ -65,7 +63,7 @@
     </div>
     <div
       :class="
-        incerment == 3
+        incerment > 2
           ? 'w-40 h-1.5 rounded-lg bgblue mt-5'
           : 'w-40 h-1.5 rounded-lg bggray mt-5'
       "
@@ -74,7 +72,7 @@
     <div>
       <div
         :class="
-          incerment === 3
+          incerment > 2
             ? 'w-10 h-10 rounded-full flex justify-center items-center bgblue mx-auto'
             : 'w-10 h-10 rounded-full flex justify-center items-center iconsbg mx-auto'
         "

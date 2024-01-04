@@ -142,10 +142,6 @@
                 'border-green-500': validateName(),
               }"
             />
-
-            <!-- <p class="text-xs mt-2">
-                      Company Name as Registered on Official Documents
-                    </p> -->
           </div>
         </div>
         <div class="flex gap-5 items-center">
@@ -264,17 +260,13 @@
               placeholder="Enter the Company Biling Address"
               v-model="formData.biling"
             />
-            <!-- <p class="text-xs mt-2">
-                      Company Name as Registered on Official Documents
-                    </p> -->
           </div>
         </div>
-
         <div class="flex gap-5 items-center">
           <div class="w-4/12 text-right">
             <label class="text-sm mb-2" for=""
-              >Company Registration Certificate *</label
-            >
+              >Company Registration Certificate
+            </label>
           </div>
           <div class="w-8/12 flex items-start gap-1">
             <div>
@@ -293,7 +285,6 @@
             <div></div>
           </div>
         </div>
-
         <div class="flex gap-5 items-center">
           <div class="w-5/12 text-right">
             <label class="text-sm mb-2" for="">Management Authorization</label>
@@ -411,7 +402,6 @@ export default {
         this.validateMobileNo()
       ) {
         var inc = 2;
-        inc = inc++;
         this.$store.commit("INCREMENT_SLIDER", inc);
 
         const updatedIncrementValue = this.$store.state.incerment;

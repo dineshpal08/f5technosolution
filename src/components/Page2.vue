@@ -55,7 +55,7 @@
       </div>
       <div class="mt-3">
         <button
-          class="text-blue px-5 py-2 text-md border"
+          class="text-blue-600 px-5 py-2 text-md border hover:bg-blue-600 hover:text-white rounded-sm"
           @click="dialog = true"
         >
           + Add New User

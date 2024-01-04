@@ -143,7 +143,7 @@
         <div>
           <div class="justify-center flex items-center gap-5">
             <button
-              class="text-blue px-5 py-2 text-md border"
+              class="text-blue-600 hover:bg-blue-600 hover:text-white px-5 py-2 text-md border"
               @click="laststep"
             >
               Save User
